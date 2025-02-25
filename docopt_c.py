@@ -307,10 +307,10 @@ int parse_shorts(struct Tokens *ts, struct Elements *elements) {
 int parse_argcmd(struct Tokens *ts, struct Elements *elements) {
     int i;
     int n_commands = elements->n_commands;
-    /* int n_arguments = elements->n_arguments; */
+    int n_arguments = elements->n_arguments;
     struct Command *command;
     struct Command *commands = elements->commands;
-    /* Argument *arguments = elements->arguments; */
+    struct Argument *arguments = elements->arguments;
 
     for (i = 0; i < n_commands; i++) {
         command = &commands[i];
@@ -320,15 +320,16 @@ int parse_argcmd(struct Tokens *ts, struct Elements *elements) {
             return EXIT_SUCCESS;
         }
     }
+    /* TODO implement. */
     /* not implemented yet, just skip for now
        parsed.append(Argument(None, tokens.move())) */
-    /*
+    
     fprintf(stderr, "! argument '%s' has been ignored\\n", ts->current);
     fprintf(stderr, "  '");
     for (i=0; i<ts->argc ; i++)
         fprintf(stderr, "%s ", ts->argv[i]);
     fprintf(stderr, "'\\n");
-    */
+   
     tokens_move(ts);
     return EXIT_SUCCESS;
 }
