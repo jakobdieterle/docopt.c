@@ -15,6 +15,7 @@ int main(int argc, char *argv[])
     printf("\tship == %s\n", args.ship ? "true" : "false");
     printf("\tshoot == %s\n", args.shoot ? "true" : "false");
     puts("Arguments");
+    printf("\tname == %s\n", args.name);
     printf("\tx == %s\n", args.x);
     printf("\ty == %s\n", args.y);
     puts("Flags");
