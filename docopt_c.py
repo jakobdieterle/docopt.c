@@ -584,7 +584,7 @@ def main():
                                                            for cmd in commands)
     t_commands = '\n{indent}/* commands */\n{indent}{t_commands};'.format(indent=_indent, t_commands=t_commands) \
         if t_commands != '' else ''
-    t_arguments = ';\n{indent}'.join('char *{!s}'.format(c_name(arg.name))
+    t_arguments = ';\n{indent}'.format(indent=_indent).join('char *{!s}'.format(c_name(arg.name))
                                      for arg in arguments)
     t_arguments = '\n{indent}/* arguments */\n{indent}{t_arguments};'.format(indent=_indent, t_arguments=t_arguments) \
         if t_arguments != '' else ''
