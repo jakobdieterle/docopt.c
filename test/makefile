@@ -3,4 +3,4 @@ build:
 	gcc -c docopt.c
 	gcc -c example.c
 	gcc -o example docopt.o example.o
-	rm docopt.o example.o
+	rm docopt.o example.o docopt.c docopt.h
